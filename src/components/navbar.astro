@@ -1,0 +1,46 @@
+---
+import { For } from "solid-js";
+
+interface NavbarProps {
+    page: string;
+}
+
+const { page } = Astro.props as NavbarProps;
+
+---
+
+<div class="container">
+    <ul>
+        <li><a href="/year9-t2-innovations-crime-scene-site/" class={page=="Home" ? "active" : "" }>HOME</a></li>
+        <li><a href="/year9-t2-innovations-crime-scene-site/evidence/" class={page=="Evidence" ? "active" : ""
+                }>EVIDENCE</a></li>
+        <li><a href="/year9-t2-innovations-crime-scene-site/scene/" class={page=="Scene" ? "active" : "" }>SCENE</a>
+        </li>
+    </ul>
+</div>
+
+<style>
+    ul {
+        /* display: block; */
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    li {
+        display: inline-block;
+        position: relative;
+    }
+
+    a {
+        display: block;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    a .active {
+        background-color: #dddddd;
+
+    }
+</style>

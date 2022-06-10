@@ -1,0 +1,54 @@
+---
+import Navbar from "../components/navbar.astro";
+
+interface MainlayoutProps {
+    title: string;
+    page: string;
+}
+
+const { title, page } = Astro.props as MainlayoutProps;
+---
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>
+        {title}
+    </title>
+    <style global>
+        @font-face {
+            font-family: GoshaSans;
+            src: url("/PPGoshaSans-Regular.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: GoshaSans;
+            font-weight: bold;
+            src: url("/PPGoshaSans-Bold.otf") format("opentype");
+        }
+
+        html,
+        body {
+            font-family: GoshaSans;
+            margin: 0;
+            background-color: #F8C78E;
+        }
+
+        body {
+            padding: 2rem;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <Navbar page={page}></Navbar>
+    <main>
+        <slot />
+    </main>
+</body>
+
+</html>
