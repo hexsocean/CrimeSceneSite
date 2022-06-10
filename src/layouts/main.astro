@@ -18,7 +18,7 @@ const { title, page } = Astro.props as MainlayoutProps;
     <title>
         {title}
     </title>
-    <style global>
+    <style is:global>
         @font-face {
             font-family: GoshaSans;
             src: url("/PPGoshaSans-Regular.otf") format("opentype");
@@ -39,13 +39,23 @@ const { title, page } = Astro.props as MainlayoutProps;
 
         body {
             padding: 2rem;
-            padding-top: 0.5rem;
+            padding-top: 80px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+        main {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 40rem;
         }
     </style>
 </head>
 
+<Navbar page={page}></Navbar>
 <body>
-    <Navbar page={page}></Navbar>
     <main>
         <slot />
     </main>
