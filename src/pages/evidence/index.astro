@@ -1,0 +1,21 @@
+---
+// import Counter from '../components/Counter.tsx';
+import { MarkdownInstance } from 'astro';
+import { For } from 'solid-js';
+import MainLayout from '../../layouts/main.astro';
+
+interface Evidence {
+    title: string,
+}
+
+let allPosts = (await Astro.glob('../../evidence/*.md')) as MarkdownInstance<Record<string, Evidence>>[];
+---
+
+<MainLayout title="Evidence" page="Evidence">
+  <h1>
+  Evidence
+  </h1>
+  <div>{allPosts.map((post, index) => {
+      return <p>{post.frontmatter.title}</p>
+  })}</div>
+</MainLayout>
