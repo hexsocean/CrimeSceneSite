@@ -5,7 +5,7 @@ import solid from "@astrojs/solid-js";
 export default defineConfig({
   // Enable Solid to support Solid JSX components.
   site: "https://hexsocean.github.io",
-  base: "year9-t2-innovations-crime-scene-site",
+  base: "CrimeSceneSite",
   integrations: [solid()],
   // server: {
   // 	fs: {
