@@ -5,7 +5,7 @@ import { For } from 'solid-js';
 import MainLayout from '../../layouts/main.astro';
 
 interface Evidence {
-    title: string,
+  title: string,
 }
 
 let allPosts = (await Astro.glob('../../evidence/*.md')) as MarkdownInstance<Record<string, Evidence>>[];
@@ -13,9 +13,18 @@ let allPosts = (await Astro.glob('../../evidence/*.md')) as MarkdownInstance<Rec
 
 <MainLayout title="Evidence" page="Evidence">
   <h1>
-  Evidence
+    Evidence
   </h1>
-  <div>{allPosts.map((post, index) => {
-      return <p>{post.frontmatter.title}</p>
-  })}</div>
+  <ul>{allPosts.map((post, index) => {
+    return <le><a href={`/CrimeSceneSite/evidence/${post.frontmatter.title}`}>
+        <h3>{post.frontmatter.title}
+        </h3>
+      </a></le>
+    })}</ul>
 </MainLayout>
+
+<style>
+  ul {
+    list-style-type: circle;
+  }
+</style>

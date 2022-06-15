@@ -1,4 +1,3 @@
 ---
 title: egg
-preunlocked: false
 ---

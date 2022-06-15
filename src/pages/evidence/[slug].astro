@@ -1,0 +1,30 @@
+---
+// import Counter from '../components/Counter.tsx';
+import { MarkdownInstance } from 'astro';
+import { For } from 'solid-js';
+import MainLayout from '../../layouts/main.astro';
+
+interface Evidence {
+    title: string,
+}
+
+export async function getStaticPaths() {
+    const posts = await Astro.glob('../../evidence/*.md');
+
+    return posts.map(p => ({
+        params: { slug: p.file.split('/').pop().split('.').shift() },
+        props: { post: p },
+    }));
+}
+
+
+const { title } = Astro.props.post.frontmatter;
+const { Content } = Astro.props.post;
+---
+
+<MainLayout title={`Evidence | ${title}`} page="Evidence">
+    <h1>
+        {title}
+    </h1>
+    <Content />
+</MainLayout>
