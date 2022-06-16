@@ -16,7 +16,7 @@ let allPosts = (await Astro.glob('../../evidence/*.md')) as MarkdownInstance<Rec
     Evidence
   </h1>
   <ul>{allPosts.map((post, index) => {
-    return <le><a href={`/CrimeSceneSite/evidence/${post.frontmatter.title}`}>
+    return <le><a href={`/CrimeSceneSite/evidence/${post.file.split('/').pop().split('.').shift()}`}>
         <h3>{post.frontmatter.title}
         </h3>
       </a></le>
