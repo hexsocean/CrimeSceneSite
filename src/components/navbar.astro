@@ -11,9 +11,11 @@ const { page } = Astro.props as NavbarProps;
 <div class="container">
     <ul>
         <li><b><a href="/CrimeSceneSite/" class={page=="Home" ? "active" : "inactive" }>HOME</a></b> </li>
-        <li><b><a href="/CrimeSceneSite/evidence/" class={page=="Evidence" ? "active" : "inactive"
-                }>EVIDENCE</a></b></li>
-        <li><b><a href="/CrimeSceneSite/scene/" class={page=="Scene" ? "active" : "inactive" }>SCENE</a></b> 
+        <li><b><a href="/CrimeSceneSite/suspects/" class={page=="Suspects" ? "active" : "inactive" }>SUSPECTS</a></b>
+        </li>
+        <li><b><a href="/CrimeSceneSite/evidence/" class={page=="Evidence" ? "active" : "inactive" }>EVIDENCE</a></b>
+        </li>
+        <li><b><a href="/CrimeSceneSite/scene/" class={page=="Scene" ? "active" : "inactive" }>SCENE</a></b>
         </li>
     </ul>
 </div>
@@ -42,17 +44,30 @@ const { page } = Astro.props as NavbarProps;
         padding-right: 15px;
     }
 
-    a:link { text-decoration: none; color: inherit;}
+    a:link {
+        text-decoration: none;
+        color: inherit;
+    }
 
-    a:visited { text-decoration: none; color: inherit; }
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
 
-    a:hover { text-decoration: none; color: inherit;}
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
 
-    a:active { text-decoration: none; color: inherit;}
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
 
     a.active {
         background-color: #FFE5BD;
     }
+
     a.inactive {
         background-color: #F8C78E;
     }

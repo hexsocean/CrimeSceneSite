@@ -4,19 +4,19 @@ import { MarkdownInstance } from 'astro';
 import { For } from 'solid-js';
 import MainLayout from '../../layouts/main.astro';
 
-interface Evidence {
+interface Suspects {
   title: string,
 }
 
-let allPosts = (await Astro.glob('../../evidence/*.md')) as MarkdownInstance<Record<string, Evidence>>[];
+let allPosts = (await Astro.glob('../../suspects/*.md')) as MarkdownInstance<Record<string, Suspects>>[];
 ---
 
-<MainLayout title="Evidence" page="Evidence">
+<MainLayout title="Suspects" page="Suspects">
   <h1>
-    Evidence
+    Suspects
   </h1>
   <ul>{allPosts.map((post, index) => {
-    return <le><a href={`/CrimeSceneSite/evidence/${post.file.split('/').pop().split('.').shift()}`}>
+    return <le><a href={`/CrimeSceneSite/suspects/${post.file.split('/').pop().split('.').shift()}`}>
         <h3>{post.frontmatter.title}
         </h3>
       </a></le>
