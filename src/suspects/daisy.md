@@ -8,3 +8,5 @@ Daisy was found slumped over and sleeping at her desk. There were pages of homew
 <h2>Description</h2>
 <p><b>Date of Birth:</b> 29th of June 1989</p>
 <p>Lives at the homeless shelter</p>
+<p>Blood found on hand</p>
+<p>Spanner in hands</p>

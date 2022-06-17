@@ -9,3 +9,4 @@ Found kocked out and sleeping on the couch.
 <p><b>Date of Birth:</b> 28th of February 1998</p>
 <p>Does not live at the homeless shelter</p>
 <p>Balisong knife found next to couch</p>
+<p>Injuries sustained to the head</p>

@@ -9,3 +9,4 @@ Found upstairs in room A3 apparently doing homework.
 <p><b>Date of Birth:</b> 16th of October 1978</p>
 <p>Lives at the homeless shelter</p>
 <p>Bloodstains found on shirt</p>
+<p>Fingerprints on drugbag</p>
