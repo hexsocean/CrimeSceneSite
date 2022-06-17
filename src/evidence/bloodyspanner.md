@@ -2,4 +2,4 @@
 title: "Bloodied Spanner"
 ---
 
-A bloodied spanner was found in the hand of Daisy Meerollin
+A bloodied spanner was found in the hand of [Daisy Meerollin](/CrimeSceneSite/suspects/daisy)
